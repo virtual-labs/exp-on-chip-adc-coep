@@ -2,9 +2,9 @@
 
 #### 1. ADC Devices : 
  Analog to digital converters are among the most widely used devices for data acquisitions. Digital computers use binary (discrete) value but in physical world everything is analog (continuous). A physical quantity is converted to electrical signals using device called transducer or also called as sensors. Sensors and many other natural quantities produce an output that is voltage (or current). Therefore we need an analog - to - digital converter to translate the analog signal to digital numbers so that the microcontroller can read and process them. The ADC chips are either parallel or serial. In parallel ADC, we have 8 or more pins dedicated to bring out the binary data, but in serial ADC we have only one pin for data out. 
-Some of the major characteristics of ADC are :
-a) resolution 
-b) conversion time 
+Some of the major characteristics of ADC are :<br/>
+a) resolution <br/>
+b) conversion time <br/>
 c) reference voltage (Vref).       
 
 ##### 1.1 Resolution 
@@ -18,7 +18,7 @@ c) reference voltage (Vref).
 |16| 65536 |5/65536 = 0.076|
 
 ##### 1.2 Conversion time 
- Conversion time is defined as the time it takes the ADC to convert the analog input to digital (binary) number. The conversion time is dictated by the clock source connected to the ADC in addition to the method used for data conversion and technology used in the fabrication of the ADC chip. 
+ Conversion time is defined as the time it takes the ADC to convert the analog input to digital (binary) number. The conversion time is dictated by the clock source connected to the ADC in addition to the method used for data conversion and technology used in the fabrication of the ADC chip. <br/>
  In addition to conversion time, acquisition time is another major factor in judging an ADC. Acquisition time is defined as the time it takes to sample the analog voltage using sample and hold circuit. Sampled analog input is applied to actual conversion unit of ADC. In some of the ADCs, conversion time doesn’t contain the acquisition time but specified separately. Therefore effective conversion time is addition of specified conversion time and specified acquisition time. 
 
 ##### 1.3 Reference Voltage (Vref) 
@@ -74,17 +74,17 @@ The Analog-to-Digital (A/D) converter module has 10 inputs for the 28-pin device
 |bit 7|||||||bit 0|
 
 
-![1](images/figure1.png)
+![1](images/figure1.PNG)
 
-**ADCON0 Register in our Program**
-bit7-6 This two bits are Unimplemented so we write this bit as 00 
-bit5-2 Analog input is connected to Channel 1 (AN1). so we have to write CHS3:CHS0 analog channal select bits as 0001
+**ADCON0 Register in our Program**<br/>
+bit7-6 This two bits are Unimplemented so we write this bit as 00 <br/>
+bit5-2 Analog input is connected to Channel 1 (AN1). so we have to write CHS3:CHS0 analog channal select bits as 0001<br/>
 bit1 Start Conversion by setting this bit. Later on poll the same conversion status. 
 Bit0 To turn ON ADC set this bit 1.
 
 ##### 2.4.2 A/D Control Register 1 (ADCON1) 
 
-![2](images/figure2.png)
+![2](images/figure2.PNG)
 
 **ADCON1 Register in our Program**
 - Bit7-6 This two bits are Unimplemented so we write this bit as 00 
@@ -99,17 +99,17 @@ Bit0 To turn ON ADC set this bit 1.
 |ADFM|-|ACQT2|ACQT1|ACQT0|ADCS2|ADCS1|ADCS0|
 |bit 7|||||||bit 0|
 
-![3](images/figure3.png)
+![3](images/figure3.PNG)
 
 ###### **2.4.3.1 A/D Result Format Select bit (ADFM):** 
  We need right justified data. Therefore ADFM = ‘1’.
 If you write 1 then result is right justified as shown below; 
 
-![4](images/figure4.png)
+![4](images/figure4.PNG)
 
 If you write 0 then result is left justified as shown below;
 
-![5](images/figure5.png)
+![5](images/figure5.PNG)
 
 ###### **2.4.3.2 A/D Conversion Clock Select bits (ADCS2:ADCS0)**
  The A/D conversion time per bit is defined as TAD. The A/D conversion requires 11 TAD per 10-bit conversion. The source of the A/D conversion clock is software selectable. There are seven possible options for TAD as shown in table For correct A/D conversions, the A/D conversion clock (TAD) must be as short as possible but greater than the minimum TAD. Table shows the resultant TAD times derived from the device operating frequencies and the A/D clock source selected. 
@@ -117,7 +117,7 @@ If you write 0 then result is left justified as shown below;
 Therefore for 10bit ADC 
 Typical conversion time = 11 TAD = 11 * 0.7 us = 7.7 us
 
-![6](images/figure6.png)
+![6](images/figure6.PNG)
 
 ###### **2.4.3.3 A/D Acquisition Time Select bits**
 Figure 1 shows the acquisition time (TACQ) is depends on amplifier settling time, capacitor charging time and temperature coefficient. 
