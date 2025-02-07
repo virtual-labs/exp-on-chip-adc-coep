@@ -136,7 +136,7 @@
       <div class="modal-body">
 <center id="modelTitle"><b>Configuration</b></center>
  <ol>
-<li>Select Input Channel (Pin AR0 to Pin RA7 ).</li>
+<li>Select Input Channel (Pin RA0 to Pin RA7).</li>
 <li>Select Reference Voltage.</li>
 <li>Enter Analog Input Voltage.</li>
 <li>Click on "GENERATE CODE" button to generate code.</li>
@@ -148,13 +148,14 @@
 
 <center id="modelTitle"><b>Mimic</b></center>
 <ol>
-<li>Click on selected input channel terminal (blue circle) and click on analog input voltage terminal (blue circle) for connection of the selected input channel to analog input voltage. OR click on analog input voltage terminal (blue circle) and click on selected input channel terminal (blue circle) for connect the analog input voltage to selected input channel.</li>
+<li>Click on selected input channel terminal (blue circle) and click on analog input voltage terminal (blue circle) for connection of the selected input channel with analog input voltage or vice versa.</li>
 <li>Click on "Check Connection" button.</li>
-<li>If you see alert like "Wrong Connection. Please Try Again." click on "Reset Connection" button and follow step 1 and step 2.</li>
-<li>If you see alert like "Connection Established Successfully. Now Click on Run Button." You can click on "Run" button.</li>
+<li>If connection is wrong, click on "Reset Connection" button and follow steps 1 and 2.</li>
+<li>If connection is successful, click on Run Button.</li>
 <li>Now observe the ADC output on Digital Output Display.</li>
-<li>Click on "REFRESH" button. to Re-executing the experiment.</li>
+<li>Click on "REFRESH" button to re-executing the experiment.</li>
 </ol>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -316,17 +317,18 @@ start_e =0;
         'closeButton': true,
         'debug': false,
         'newestOnTop': false,
-        'progressBar': false,
-        'positionClass': 'toast-top-right',
+        'progressBar': true,
+        'positionClass': 'toast-bottom-right',
         'preventDuplicates': false,
         'showDuration': '1000',
         'hideDuration': '1000',
-        'timeOut': '500',
-        'extendedTimeOut': '500',
+        'timeOut': '5000',
+        'extendedTimeOut': '1000',
         'showEasing': 'swing',
         'hideEasing': 'linear',
         'showMethod': 'fadeIn',
         'hideMethod': 'fadeOut',
+        'margin-bottom':'50%'
     }
 </script>
 <script>

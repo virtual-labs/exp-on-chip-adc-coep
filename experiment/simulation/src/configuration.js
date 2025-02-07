@@ -102,19 +102,19 @@ var selection ='<div class="row selectConf" >'
 	
 	+ '<div class="row" selectConf>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-danger btnStyle button button5" id="generateCode" data-toggle="modal" data-target="#myModal" disabled><b>GENERATE CODE</b></button>'
+	+ '<button type="button" class="btn btn-danger btnStyle button button5" id="generateCode" data-toggle="modal" data-target="#myModal" disabled><b>GENERATE<br>CODE</b></button>'
 	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-success btnStyle button button4" id="compileCode" data-toggle="modal" data-target="#myModal" disabled><b>COMPILE</b></button>'
+	+ '<button type="button" class="btn btn-success btnStyle button button4" id="compileCode" data-toggle="modal" data-target="#myModal" disabled><b>COMPILE<br>CODE</b></button>'
 	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-success btnStyle button button4" id="executeCode" data-toggle="modal" data-target="#myModal" disabled ><b>EXECUTE</b></button>'
+	+ '<button type="button" class="btn btn-success btnStyle button button4" id="executeCode" data-toggle="modal" data-target="#myModal" disabled ><b>EXECUTE<br>CODE</b></button>'
 	+ '</div>'
 //	+ '<div class="col-sm-2" id="buttonDiv">'
 //  +' <button type="button" class="btn btn-info btnStyle button button3" id="refresh" data-toggle="modal"><b>REFRESH</b></button>'
 //	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-primary btnStyle button button2" id="downloadCode" data-toggle="modal" disabled><i class="fa fa-download"></i> <b>DOWNLOAD</b></button>'
+	+ '<button type="button" class="btn btn-primary btnStyle button button2" id="downloadCode" data-toggle="modal" disabled><i class="fa fa-download"></i> <b>DOWNLOAD<br>PROGRAM</b></button>'
 	+ '</div>'
 	+ '</div>'
 	
@@ -172,7 +172,7 @@ var analogVal;
 		$("body").css("padding","0px 0px 0px 0px");	
 		channelVal = $("#channelNo").val();
 		if(channelVal<=0){
-			alert("Select Input Channel.");
+			toastr.warning("Select Input Channel.");
 		}else{	
 			channelVal = $("#channelNo").val();	  
 		  $("#refV").prop("disabled",false);			  
@@ -188,7 +188,7 @@ var analogVal;
 		referanceVal = $("#refV").val();
 //		console.log("refV="+referanceVal);
 		if(referanceVal<=0){
-			alert("Select Referance Voltage.");
+			toastr.warning("Select Referance Voltage.");
 		}else{
 			referanceVal = $("#refV").val();		  
 		  $("#analogV").prop("disabled",false);			  
@@ -213,14 +213,14 @@ var analogVal;
 			analogVal = parseFloat($("#analogV").val());
 			if(analogVal==""){
 	//			$("#modelMsg").html("<b class='boldTextRed'>Enter numeric value.</b>");	
-				alert("Enter numeric value.");
+				toastr.warning("Enter numeric value.");
 			}else{	
 				analogVal = parseFloat($("#analogV").val());
 							
 				if(analogVal>=0 && analogVal<=5){					  
  		  			$("#generateCode").prop("disabled",false);		
 				}else{
-					alert("Enter the value of analog input voltage in the range of 0V to 5V");			
+					toastr.warning("Enter the value of analog input voltage in the range of 0V to 5V");			
 				}		
 			}
 	});
@@ -330,7 +330,7 @@ var binaryCode="";
 	                hexValue = "Unknown"; // Default value if frequency is not recognized
 	        }
 			return hexValue,binaryCode;
-	        console.log(hexValue,binaryCode);
+	       // console.log(hexValue,binaryCode);
 	
 	    }
 var digitalVal;
@@ -500,7 +500,7 @@ $("#downloadCode").click(function () {
 //			$("#modelMsg").html("<b class='boldTextGreen'>Download Code File Successfully.</b>");	
 	}else{
 //		$("#modelMsg").html("<b class='boldTextGreen'>Please Generate The Code First and Then You Can Download Code File.</b>");
-		alert("Please Generate The Code First and Then You Can Download Code File.")
+		toastr.warning("Please Generate The Code First and Then You Can Download Code File.")
 	}
 
  
