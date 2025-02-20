@@ -37,7 +37,7 @@
         {
             "question": "4) In the ADC module, which register stores the high and low byte of the converted digital result?",
             "answers": {
-                "a": "ADCON1,
+                "a": "ADCON1",
                 "b": "ADCON2",
                 "c": "ADRESH : ADRESL",
                 "d": "ADCON0"
@@ -48,7 +48,7 @@
         {
             "question": "5) Which step is NOT required in the ADC conversion process?",
             "answers": {
-                "a": "Configure the ADC module,
+                "a": "Configure the ADC module",
                 "b": "Select the input channel",
                 "c": "Set the GO/DONE bit to start conversion",
                 "d": "Manually shift bits to align the result"
