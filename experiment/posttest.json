@@ -2,47 +2,58 @@
     "version": 2,
     "questions": [
         {
-            "question": "1) What is a clock cycle?",
+            "question": "1) What is the total time required for a 10-bit ADC conversion if the minimum TAD is 0.7 microsecond?",
             "answers": {
-                "a": "The time it takes for a microcontroller to execute one instruction",
-                "b": "The time it takes for a microcontroller to turn on",
-                "c": "The time it takes for a microcontroller to turn off",
-                "d": "The time it takes for a microcontroller to switch from one task to another"
-            },
-            "correctAnswer": "a",
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2) How does the clock speed affect the accuracy of the microcontroller's timing functions?",
-            "answers": {
-                "a": "The higher the clock speed, the more accurate the timing functions",
-                "b": "The lower the clock speed, the more accurate the timing functions",
-                "c": "The accuracy of the timing functions is not affected by the clock speed",
-                "d": "The accuracy of the timing functions is determined by the type of instructions being executed"
+                "a": "5.5 microsecond",
+                "b": "7.7 microsecond",
+                "c": "9.5 microsecond",
+                "d": "11.2 microsecond"
             },
             "correctAnswer": "b",
             "difficulty": "beginner"
         },
         {
-            "question": "3) What is the function of a microcontroller?",
+            "question": "2) In the ADC module of a PIC microcontroller, what does the ADFM bit in the ADCON2 register control?",
             "answers": {
-                "a": "To process data and execute instructions",
-                "b": "To provide power to the circuit",
-                "c": "To control the temperature of the microcontroller",
-                "d": "To store data"
+                "a": "Selection of analog input channel",
+                "b": "Reference voltage configuration",
+                "c": "A/D result justification (left or right)",
+                "d": "Clock speed adjustment"
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3) Which of the following statements about ADC acquisition time (TACQ) is correct?",
+            "answers": {
+                "a": "TACQ is calculated as TAMP + TC + TCOFF",
+                "b": "TACQ is independent of temperature",
+                "c": "TACQ is always a fixed value for all ADCs",
+                "d": "TACQ does not affect ADC accuracy"
             },
             "correctAnswer": "a",
             "difficulty": "beginner"
         },
         {
-            "question": "4) How does the CPU clock affect the operations of a microcontroller?",
+            "question": "4) In the ADC module, which register stores the high and low byte of the converted digital result?",
             "answers": {
-                "a": "It determines the speed at which the instructions are executed",
-                "b": "It determines the amount of memory available to the microcontroller",
-                "c": "It determines the size of the microcontroller",
-                "d": "It determines the type of instructions that can be executed"
+                "a": "ADCON1,
+                "b": "ADCON2",
+                "c": "ADRESH : ADRESL",
+                "d": "ADCON0"
             },
-            "correctAnswer": "a",
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5) Which step is NOT required in the ADC conversion process?",
+            "answers": {
+                "a": "Configure the ADC module,
+                "b": "Select the input channel",
+                "c": "Set the GO/DONE bit to start conversion",
+                "d": "Manually shift bits to align the result"
+            },
+            "correctAnswer": "d",
             "difficulty": "beginner"
         }
     ]
