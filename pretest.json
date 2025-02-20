@@ -1,0 +1,62 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1) What is the primary function of an Analog-to-Digital Converter (ADC)?",
+      "answers": {
+        "a": "Convert digital signals into analog signals",
+        "b": "Convert analog signals into digital signals",
+        "c": "Store binary data in memory",
+        "d": "Transmit signals wirelessly"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2) Which factor determines the smallest change an ADC can detect?",
+      "answers": {
+        "a": "Reference voltage",
+        "b": "Conversion time",
+        "c": "Resolution",
+        "d": "Clock speed"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3) How many steps does a 10-bit ADC have?",
+      "answers": {
+        "a": "256",
+        "b": "512",
+        "c": "1024",
+        "d": "2048"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },	
+	{
+      "question": "4) If an ADC has a reference voltage (Vref) of 5V and a resolution of 8 bits, what is the step size?",
+      "answers": {
+        "a": "5/256 = 19.53 mV",
+        "b": "5/1024 = 4.88 mV",
+        "c": "5/4096 = 1.2 mV",
+        "d": "5/65536 = 0.076 mV"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },	
+	{
+      "question": "5) What does the ADCON0 register control in an ADC module?",
+      "answers": {
+        "a": "Setting the reference voltage",
+        "b": "Adjusting the acquisition time",
+        "c": "Configuring digital I/O pins",
+        "d": "Selecting the analog input channel and starting the conversion"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+	
+	
+  ]
+}

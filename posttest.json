@@ -1,0 +1,60 @@
+{
+    "version": 2,
+    "questions": [
+        {
+            "question": "1) What is the total time required for a 10-bit ADC conversion if the minimum TAD is 0.7 microsecond?",
+            "answers": {
+                "a": "5.5 microsecond",
+                "b": "7.7 microsecond",
+                "c": "9.5 microsecond",
+                "d": "11.2 microsecond"
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2) In the ADC module of a PIC microcontroller, what does the ADFM bit in the ADCON2 register control?",
+            "answers": {
+                "a": "Selection of analog input channel",
+                "b": "Reference voltage configuration",
+                "c": "A/D result justification (left or right)",
+                "d": "Clock speed adjustment"
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3) Which of the following statements about ADC acquisition time (TACQ) is correct?",
+            "answers": {
+                "a": "TACQ is calculated as TAMP + TC + TCOFF",
+                "b": "TACQ is independent of temperature",
+                "c": "TACQ is always a fixed value for all ADCs",
+                "d": "TACQ does not affect ADC accuracy"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4) In the ADC module, which register stores the high and low byte of the converted digital result?",
+            "answers": {
+                "a": "ADCON1",
+                "b": "ADCON2",
+                "c": "ADRESH : ADRESL",
+                "d": "ADCON0"
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5) Which step is NOT required in the ADC conversion process?",
+            "answers": {
+                "a": "Configure the ADC module",
+                "b": "Select the input channel",
+                "c": "Set the GO/DONE bit to start conversion",
+                "d": "Manually shift bits to align the result"
+            },
+            "correctAnswer": "d",
+            "difficulty": "beginner"
+        }
+    ]
+}
